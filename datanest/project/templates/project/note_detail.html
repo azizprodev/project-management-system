@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+    <h1 class="mb-6 text-3xl">{{note.name}}</h1>
+
+    <a href="{% url 'project:edit_note' project.id note.id %}" class="text-white bg-sky-600 px-4 py-2">Edit</a>
+    <a href="{% url 'project:delete_note' project.id note.id %}" class="text-white bg-amber-600 px-4 py-2">Delete</a>
+
+    <p class="mt-6">{{note.body}}</p>
+
+{% endblock %}
